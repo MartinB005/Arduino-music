@@ -90,7 +90,7 @@
 #define NOTE_D8 4699
 #define NOTE_DS8 4978
 
-int bpm = 126;
+int bpm = 119;
 
 struct Note
 {
@@ -98,8 +98,11 @@ struct Note
   float time;
   float duration;
 };
+//FADED - Note notes[] = {{NOTE_FS5, 0, 0.5}, {NOTE_FS5, 0.5, 0.5}, {NOTE_DS5, 1, 0.5}, {NOTE_FS5, 1.5, 0.5}, {NOTE_DS5, 2, 0.5}, {NOTE_FS5, 2.5, 0.5}, {NOTE_GS5, 3, 0.5}, {NOTE_AS5, 3.5, 1}, {NOTE_FS5, 4.5, 0.5}, {NOTE_FS5, 5, 0.5}, {NOTE_CS5, 5.5, 0.75}, {NOTE_AS5, 6.25, 3.25}, {NOTE_FS5, 10, 0.5}, {NOTE_FS5, 10.5, 0.5}, {NOTE_FS5, 11, 0.5}, {NOTE_E5, 11.5, 1.5}, {NOTE_E5, 13, 0.5}, {NOTE_E5, 13.5, 0.5}, {NOTE_DS5, 14, 0.5}, {NOTE_FS5, 14.5, 1}, {NOTE_FS5, 16, 0.5}, {NOTE_FS5, 16.5, 0.5}, {NOTE_DS5, 17, 0.5}, {NOTE_FS5, 17.5, 0.5}, {NOTE_DS5, 18, 0.5}, {NOTE_FS5, 18.5, 0.5}, {NOTE_GS5, 19, 0.5}, {NOTE_AS5, 19.5, 1}, {NOTE_FS5, 20.5, 0.5}, {NOTE_FS5, 21, 0.5}, {NOTE_CS5, 21.5, 0.75}, {NOTE_AS5, 22.25, 2.25}, {NOTE_FS5, 26, 0.5}, {NOTE_FS5, 26.5, 0.5}, {NOTE_GS5, 27, 2}, {NOTE_AS5, 30, 0.5}, {NOTE_AS5, 30.5, 0.5}, {NOTE_AS5, 31, 0.5}};
 
-Note notes[] = {{NOTE_FS5, 0, 0.5}, {NOTE_E5, 0.5, 0.5}, {NOTE_E5, 1, 0.5}, {NOTE_E5, 2, 0.5}, {NOTE_E5, 2.5, 0.5}, {NOTE_E5, 3, 0.5}, {NOTE_E5, 3.5, 0.5}, {NOTE_DS5, 4, 0.5}, {NOTE_DS5, 4.5, 0.5}, {NOTE_E5, 5, 0.5}, {NOTE_E5, 5.5, 0.5}, {NOTE_CS6, 6.5, 0.5}, {NOTE_B5, 7, 0.5}, {NOTE_GS5, 7.5, 0.5}, {NOTE_FS5, 8, 0.5}, {NOTE_E5, 8.5, 0.5}, {NOTE_E5, 9, 0.5}, {NOTE_E5, 10, 0.5}, {NOTE_E5, 10.5, 0.5}, {NOTE_E5, 11, 0.5}, {NOTE_E5, 11.5, 0.5}, {NOTE_CS5, 12, 0.5}, {NOTE_CS5, 12.5, 0.5}, {NOTE_B4, 13, 0.5}, {NOTE_B4, 13.5, 0.5}, {NOTE_CS6, 14.5, 0.5}, {NOTE_B5, 15, 0.5}, {NOTE_GS5, 15.5, 0.5}};
+Note notes[] = {{NOTE_GS5, 0, 0.5}, {NOTE_GS5, 0.5, 0.5}, {NOTE_GS4, 1, 0.5}, {NOTE_GS4, 1.5, 0.5}, {NOTE_DS5, 2, 0.5}, {NOTE_DS5, 2.5, 0.5}, {NOTE_GS4, 3, 0.5}, {NOTE_GS4, 3.5, 0.5}, {NOTE_GS5, 4, 0.5}, {NOTE_GS5, 4.5, 0.5}, {NOTE_E5, 5, 0.5}, {NOTE_B4, 5.5, 0.5}, {NOTE_FS5, 6, 0.5}, {NOTE_FS5, 6.5, 0.5}, {NOTE_FS4, 7, 0.5}, {NOTE_FS4, 7.5, 0.5}, {NOTE_GS5, 8, 0.5}, {NOTE_GS5, 8.5, 0.5}, {NOTE_GS4, 9, 0.5}, {NOTE_GS4, 9.5, 0.5}, {NOTE_DS5, 10, 0.5}, {NOTE_DS5, 10.5, 0.5}, {NOTE_GS4, 11, 0.5}, {NOTE_GS4, 11.5, 0.5}, {NOTE_GS5, 12, 0.5}, {NOTE_GS5, 12.5, 0.5}, {NOTE_E5, 13, 0.5}, {NOTE_B4, 13.5, 0.5}, {NOTE_FS5, 14, 0.5}, {NOTE_FS5, 14.5, 0.5}, {NOTE_FS4, 15, 0.5}, {NOTE_FS4, 15.5, 0.5}, {NOTE_B5, 16, 0.5}, {NOTE_B5, 16.5, 0.5}, {NOTE_B5, 17, 0.5}, {NOTE_B5, 17.5, 0.5}, {NOTE_B5, 18, 0.5}, {NOTE_B5, 18.5, 0.5}, {NOTE_B5, 19, 0.5}, {NOTE_B5, 19.5, 0.5}, {NOTE_B5, 20, 0.5}, {NOTE_B5, 20.5, 0.5}, {NOTE_B5, 21, 0.5}, {NOTE_B5, 21.5, 0.5}, {NOTE_CS5, 22, 0.5}, {NOTE_B5, 22.5, 0.25}, {NOTE_CS5, 23, 0.5}, {NOTE_B5, 23.5, 0.25}, {NOTE_DS6, 24, 0.5}, {NOTE_DS6, 24.5, 0.5}, {NOTE_DS6, 25, 0.5}, {NOTE_DS6, 25.5, 0.5}, {NOTE_DS6, 26, 0.5}, {NOTE_DS6, 26.5, 0.5}, {NOTE_DS6, 27, 0.5}, {NOTE_DS6, 27.5, 0.5}, {NOTE_DS6, 28, 0.5}, {NOTE_DS6, 28.5, 0.5}, {NOTE_DS6, 29, 0.5}, {NOTE_DS6, 29.5, 0.5}, {NOTE_E6, 30, 0.5}, {NOTE_DS6, 30.5, 0.25}, {NOTE_E6, 31, 0.5}, {NOTE_DS6, 31.5, 0.25}, {NOTE_B5, 32, 0.5}, {NOTE_B5, 32.5, 0.5}, {NOTE_B5, 33, 0.5}, {NOTE_B5, 33.5, 0.5}, {NOTE_B5, 34, 0.5}, {NOTE_B5, 34.5, 0.5}, {NOTE_B5, 35, 0.5}, {NOTE_B5, 35.5, 0.5}, {NOTE_B5, 36, 0.5}, {NOTE_B5, 36.5, 0.5}, {NOTE_B5, 37, 0.5}, {NOTE_B5, 37.5, 0.5}, {NOTE_CS5, 38, 0.5}, {NOTE_B5, 38.5, 0.25}, {NOTE_CS5, 39, 0.5}, {NOTE_B5, 39.5, 0.25}, {NOTE_DS6, 40, 0.5}, {NOTE_DS6, 40.5, 0.5}, {NOTE_DS6, 41, 0.5}, {NOTE_DS6, 41.5, 0.5}, {NOTE_DS6, 42, 0.5}, {NOTE_DS6, 42.5, 0.5}, {NOTE_DS6, 43, 0.5}, {NOTE_DS6, 43.5, 0.5}, {NOTE_DS6, 44, 0.5}, {NOTE_DS6, 44.5, 0.5}, {NOTE_DS6, 45, 0.5}, {NOTE_DS6, 45.5, 0.5}, {NOTE_E6, 46, 0.5}, {NOTE_DS6, 46.5, 0.25}, {NOTE_E6, 47, 0.5}, {NOTE_DS6, 47.5, 0.25}};
+
+
 void setup()
 {
   Serial.begin(9600);
